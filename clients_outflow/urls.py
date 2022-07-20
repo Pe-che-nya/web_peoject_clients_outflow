@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import predict.views as predictviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('listClients/', predictviews.main)
 ]

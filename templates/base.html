@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о людях</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
+</head>
+<body>
+    <ul class="nav">
+        {% for nav in navigation %}
+            <li><a href="{{ nav.link }}">{{ nav.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% block content %}
+    {% endblock content %}
+
+</body>
+</html>
